@@ -18,11 +18,43 @@ Ce rapport présente notre travail sur le TP3 du cours 8INF804 - Vision artifici
 -   Libs: pandas, os, pytorch, numpy, tqdm, sklearn.metrics, plotly.express, sys
 -   Dataset trouvé sur Kaggle : [Cards Image Dataset-Classification](https://www.kaggle.com/datasets/gpiosenka/cards-image-datasetclassification)
 
-## Description de l'algorithme
+## Description de l'entrainement
 
 Pour ce TP, nous avons décidé de travailler sur GoogleColab nottamment pour diminuer le temps d'entrainement de nos réseaux de neurones. 
-Pour notre dataset, nous avons choisi les images d'un jeu de 52 cartes et le joker donc 53 cartes en tout.
-Pour l'architecture déjà entrainée, nous avons choisi VGG19. 
+Pour notre dataset, nous avons choisi les images d'un jeu de 53 cartes.
+Pour l'architecture déjà entrainée, nous avons choisi VGG19.
+
+### Description du dataset
+
+### Description des architectures
+
+#### VGG19
+
+#### Home-made CNN
+
+### Description de l'algorithme
+
+#### Transformations des images
+
+#### Optimizer et loss function
+
+## Méthodologie de recherche et d'expérimentation
+
+### Recherche des hyperparamètres
+
+### Entrainements sur beaucoup d'epochs
+
+## Résultats
+
+### Hyperparamètres optimaux
+
+### Evaluation des performances
+
+### Visualisation des entrainements
+
+## Conclusion
+
+
 
 1. Téléchargement de notre dataset
 
