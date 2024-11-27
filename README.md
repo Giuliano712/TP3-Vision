@@ -165,9 +165,9 @@ Nous avons laissé constant les hyperparamètres suivants :
 
 Pour l'entrainement de VGG nous avons fait varier les mêmes hyperparamètres que pour notre CNN.
 
-- Taille des batchs : 16, 32, 64, 128
-- Taux d'apprentissage : 0.0005, 0.0001, 0.00005, 0.00001
-- Weight decay : 0.0001, 0.0005, 0.001
+- **Taille des batchs** : 16, 32, 64, 128
+- **Taux d'apprentissage** : 0.0005, 0.0001, 0.00005, 0.00001
+- **Weight decay** : 0.00005, 0.0001, 0.0005, 0.001
 
 ##### Batch size
 
@@ -202,14 +202,14 @@ Nous avons laissé constant les hyperparamètres suivants :
 Nous avons laissé constant les hyperparamètres suivants :
 
 - Taille de batch : 64
-- Learning Rate : 5e-5
+- Learning Rate : 0.005
 
-| Weight Decay | Accuracy | Kappa |
-| :----------: | :------: | :---: |
-|    5e-05     |  0.241   | 0.226 |
-|              |          |       |
-|              |          |       |
-|              |          |       |
+| Weight Decay | Accuracy  |   Kappa   |
+| :----------: | :-------: | :-------: |
+|    5e-05     |   0.241   |   0.226   |
+|    0.0005    |   0.230   |   0.215   |
+|    0.001     |   0.252   |   0.238   |
+|  **0.0001**  | **0.279** | **0.265** |
 
 ## Résultats
 
@@ -239,23 +239,23 @@ Ci-dessous se trouvent les hyperparamètres optimaux pour nos deux architectures
 
 Sur 3 entrainements, nous avons obtenu les résultats suivants :
 
-| Training | Accuracy           | Balanced Accuracy  | Kappa              | Top-2 Accuracy     | Top-3 Accuracy     |
-| -------- | ------------------ | ------------------ | ------------------ | ------------------ | ------------------ |
-| 1        | 0.5320754716981132 | 0.5320754716981132 | 0.523076923076923  | 0.6490566037735849 | 0.7132075471698113 |
-| 2        | 0.5320754716981132 | 0.5320754716981131 | 0.523076923076923  | 0.6377358490566037 | 0.7245283018867924 |
-| 3        | 0.5245283018867924 | 0.5245283018867924 | 0.5153846153846153 | 0.6641509433962264 | 0.7169811320754716 |
-| Moyenne  | 0.529559748427673  | 0.529559748427673  | 0.52051282051282   | 0.650314465408805  | 0.718238993710692  |
+| Training | Accuracy | Balanced Accuracy | Kappa | Top-2 Accuracy | Top-3 Accuracy |
+| -------- | -------- | ----------------- | ----- | -------------- | -------------- |
+| 1        | 0.532    | 0.532             | 0.523 | 0.649          | 0.713          |
+| 2        | 0.532    | 0.531             | 0.523 | 0.637          | 0.724          |
+| 3        | 0.524    | 0.524             | 0.515 | 0.664          | 0.717          |
+| Moyenne  | 0,529    | 0,529             | 0,520 | 0,65           | 0,718          |
 
 #### CNN
 
 Sur 3 entrainements, nous avons obtenu les résultats suivants :
 
-| Training | Accuracy | Balanced Accuracy  | Kappa | Top-2 Accuracy  | Top-3 Accuracy  |
-| -------- | ---------| ------------------ | ----- | --------------- | --------------- |
-| 1        |   0.415  |       0.415        | 0.403 |      0.445      |       0.471     |
-| 2        |   0.384  |       0.384        | 0.373 |      0.437      |       0.449     |
-| 3        |   0.392  |       0.392        | 0.380 |      0.426      |       0.456     |
-| Moyenne  |   0,397  |       0,397        | 0,385 |      0,436      |       0,459     |
+| Training | Accuracy | Balanced Accuracy | Kappa | Top-2 Accuracy | Top-3 Accuracy |
+| -------- | -------- | ----------------- | ----- | -------------- | -------------- |
+| 1        | 0.415    | 0.415             | 0.403 | 0.445          | 0.471          |
+| 2        | 0.384    | 0.384             | 0.373 | 0.437          | 0.449          |
+| 3        | 0.392    | 0.392             | 0.380 | 0.426          | 0.456          |
+| Moyenne  | 0,397    | 0,397             | 0,385 | 0,436          | 0,459          |
 
 ### Visualisation des entrainements
 
