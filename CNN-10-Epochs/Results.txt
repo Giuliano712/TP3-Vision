@@ -1,0 +1,146 @@
+Hyperparameters
+Model name: CNN
+Epoch number: 10
+Batch size: 64
+Learning rate: 5e-05
+Weight decay: 0.0001
+CNNClassifier(
+  (model): Sequential(
+    (0): Conv2d(3, 64, kernel_size=(3, 3), stride=(1, 1))
+    (1): ReLU()
+    (2): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (3): Conv2d(64, 64, kernel_size=(3, 3), stride=(2, 2))
+    (4): ReLU()
+    (5): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (6): Conv2d(64, 128, kernel_size=(3, 3), stride=(1, 1))
+    (7): ReLU()
+    (8): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (9): Conv2d(128, 128, kernel_size=(3, 3), stride=(2, 2))
+    (10): ReLU()
+    (11): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (12): Conv2d(128, 256, kernel_size=(3, 3), stride=(1, 1))
+    (13): ReLU()
+    (14): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (15): Conv2d(256, 256, kernel_size=(3, 3), stride=(2, 2))
+    (16): ReLU()
+    (17): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (18): Conv2d(256, 512, kernel_size=(3, 3), stride=(1, 1))
+    (19): ReLU()
+    (20): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (21): Conv2d(512, 512, kernel_size=(3, 3), stride=(2, 2))
+    (22): ReLU()
+    (23): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (24): Flatten(start_dim=1, end_dim=-1)
+    (25): Linear(in_features=73728, out_features=120, bias=True)
+    (26): ReLU()
+    (27): Linear(in_features=120, out_features=84, bias=True)
+    (28): ReLU()
+    (29): Linear(in_features=84, out_features=53, bias=True)
+    (30): Softmax(dim=1)
+  )
+)
+Total parameters: 13551365
+Trainable parameters: 13551365
+CNNClassifier(
+  (model): Sequential(
+    (0): Conv2d(3, 64, kernel_size=(3, 3), stride=(1, 1))
+    (1): ReLU()
+    (2): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (3): Conv2d(64, 64, kernel_size=(3, 3), stride=(2, 2))
+    (4): ReLU()
+    (5): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (6): Conv2d(64, 128, kernel_size=(3, 3), stride=(1, 1))
+    (7): ReLU()
+    (8): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (9): Conv2d(128, 128, kernel_size=(3, 3), stride=(2, 2))
+    (10): ReLU()
+    (11): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (12): Conv2d(128, 256, kernel_size=(3, 3), stride=(1, 1))
+    (13): ReLU()
+    (14): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (15): Conv2d(256, 256, kernel_size=(3, 3), stride=(2, 2))
+    (16): ReLU()
+    (17): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (18): Conv2d(256, 512, kernel_size=(3, 3), stride=(1, 1))
+    (19): ReLU()
+    (20): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (21): Conv2d(512, 512, kernel_size=(3, 3), stride=(2, 2))
+    (22): ReLU()
+    (23): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (24): Flatten(start_dim=1, end_dim=-1)
+    (25): Linear(in_features=73728, out_features=120, bias=True)
+    (26): ReLU()
+    (27): Linear(in_features=120, out_features=84, bias=True)
+    (28): ReLU()
+    (29): Linear(in_features=84, out_features=53, bias=True)
+    (30): Softmax(dim=1)
+  )
+)
+Total parameters: 13551365
+Trainable parameters: 13551365
+Accuracy: 0.33962264150943394
+Balanced Accuracy: 0.33962264150943405
+F1-score: 0.33962264150943394
+Kappa: 0.32692307692307687
+                   precision    recall  f1-score   support
+
+     ace of clubs       0.00      0.00      0.00         5
+  ace of diamonds       0.00      0.00      0.00         5
+    ace of hearts       0.00      0.00      0.00         5
+    ace of spades       0.25      1.00      0.40         5
+   eight of clubs       0.00      0.00      0.00         5
+eight of diamonds       0.00      0.00      0.00         5
+  eight of hearts       0.36      0.80      0.50         5
+  eight of spades       0.00      0.00      0.00         5
+    five of clubs       0.60      0.60      0.60         5
+ five of diamonds       0.00      0.00      0.00         5
+   five of hearts       0.00      0.00      0.00         5
+   five of spades       0.50      0.40      0.44         5
+    four of clubs       0.50      0.80      0.62         5
+ four of diamonds       0.00      0.00      0.00         5
+   four of hearts       0.29      1.00      0.45         5
+   four of spades       0.00      0.00      0.00         5
+    jack of clubs       0.23      0.60      0.33         5
+ jack of diamonds       0.40      0.40      0.40         5
+   jack of hearts       0.00      0.00      0.00         5
+   jack of spades       0.00      0.00      0.00         5
+            joker       0.00      0.00      0.00         5
+    king of clubs       0.20      1.00      0.33         5
+ king of diamonds       0.44      0.80      0.57         5
+   king of hearts       0.00      0.00      0.00         5
+   king of spades       0.00      0.00      0.00         5
+    nine of clubs       0.00      0.00      0.00         5
+ nine of diamonds       0.75      0.60      0.67         5
+   nine of hearts       0.44      0.80      0.57         5
+   nine of spades       0.31      0.80      0.44         5
+   queen of clubs       0.00      0.00      0.00         5
+queen of diamonds       0.50      0.60      0.55         5
+  queen of hearts       0.36      0.80      0.50         5
+  queen of spades       0.00      0.00      0.00         5
+   seven of clubs       0.00      0.00      0.00         5
+seven of diamonds       0.00      0.00      0.00         5
+  seven of hearts       0.42      1.00      0.59         5
+  seven of spades       0.30      0.60      0.40         5
+     six of clubs       0.10      0.40      0.15         5
+  six of diamonds       0.56      1.00      0.71         5
+    six of hearts       0.00      0.00      0.00         5
+    six of spades       0.00      0.00      0.00         5
+     ten of clubs       0.00      0.00      0.00         5
+  ten of diamonds       0.33      0.60      0.43         5
+    ten of hearts       0.00      0.00      0.00         5
+    ten of spades       0.00      0.00      0.00         5
+   three of clubs       0.00      0.00      0.00         5
+three of diamonds       0.00      0.00      0.00         5
+  three of hearts       0.24      1.00      0.38         5
+  three of spades       0.62      1.00      0.77         5
+     two of clubs       0.00      0.00      0.00         5
+  two of diamonds       0.80      0.80      0.80         5
+    two of hearts       0.00      0.00      0.00         5
+    two of spades       0.30      0.60      0.40         5
+
+         accuracy                           0.34       265
+        macro avg       0.19      0.34      0.23       265
+     weighted avg       0.19      0.34      0.23       265
+
+Top 2 Accuracy: 0.3660377358490566
+Top 3 Accuracy: 0.3886792452830189
