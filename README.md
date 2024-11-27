@@ -46,7 +46,7 @@ Ici on choisi le modèle a entrainer, le nombre d'epochs, la taille des batchs e
 
 6. Création des logs
 
-Nous crééons un fichier dans lequel nous mettons les paramètres du test et nous mettrons les données du test comme l'accuracy, le coeff de kappa et les courbes d'apprentissage.
+Nous crééons un fichier txt dans lequel nous mettons les paramètres du test et nous mettrons les données du test comme l'accuracy, le coeff de kappa et les courbes d'apprentissage.
 
 7. Charger le dataset
 
