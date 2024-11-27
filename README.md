@@ -237,6 +237,26 @@ Ci-dessous se trouvent les hyperparamètres optimaux pour nos deux architectures
 
 ### Visualisation des entrainements
 
+#### Loss
+
+![Loss CNN](/Image/LossCNN.png)
+![Loss VGG](/Image/LossVGG.png)
+
+#### Accuracy
+
+![Accuracy CNN](/Image/AccuracyCNN.png)
+![Accuracy VGG](/Image/AccuracyVGG.png)
+
+#### Kappa
+
+![Kappa CNN](/Image/KappaCNN.png)
+![Kappa VGG](/Image/KappaVGG.png)
+
+#### Top-3 accuracy
+
+![Top-3-accuracy CNN](/Image/Top-3-accuracyCNN.png)
+![Top-3-accuracy VGG](/Image/Top-3-accuracyVGG.png)
+
 ## Conclusion
 
 Ce TP nous a permis de comprendre l'utilité du transfer learning d'une architecture déjà entrainée comparée à un modèle CNN qui s'entraine de zéro. La première méthode obtient des meilleurs accuracy avec une meilleure rapidité en sachant que le VGG19 s'entraine sur  217 141 paramètres alors que notre CNN est sur 13 551 365 paramètres.
