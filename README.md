@@ -16,7 +16,7 @@ Ce rapport présente notre travail sur le TP3 du cours 8INF804 - Vision artifici
 
 -   Python 3
 -   Libs: pandas, os, pytorch, numpy, tqdm, sklearn.metrics, plotly.express, sys
--   Dataset trouvé sur Kaggle : 'Cards Image Dataset-Classification'
+-   Dataset trouvé sur Kaggle : [Cards Image Dataset-Classification](https://www.kaggle.com/datasets/gpiosenka/cards-image-datasetclassification)
 
 ## Description de l'algorithme
 
