@@ -17,6 +17,11 @@ Ce rapport présente notre travail sur le TP3 du cours 8INF804 - Vision artifici
 - Python 3
 - Libs: pandas, os, pytorch, numpy, tqdm, sklearn.metrics, plotly.express, sys
 - Dataset trouvé sur Kaggle : [Cards Image Dataset-Classification](https://www.kaggle.com/datasets/gpiosenka/cards-image-datasetclassification)
+- Google Colab
+
+### Ressouces
+
+Pour entrainer un modèle de cette envergure, nous avons décidé de passer sur **Google Colab**. En effet, nous n'avions pas tous des GPUs Nvidia et le temps d'entrainement était très long sur nos machines. Grâce aux GPU T4, nous avons pu significativement réduire nos temps d'entrainement, ce qui nous as permis d'effectuer beaucoup plus de tests et d'optimisations pour la recherche en hyperparamètres.
 
 ## Description de l'entrainement
 
@@ -108,9 +113,9 @@ Avant de modifier les epochs nous avons voulu trouver les meilleurs valeurs pour
 
 Pour l'entrainement de notre modèle CNN, nous avons fait varier les hyperparamètres suivants :
 
-- Taille des batchs : 16, 32, 64, 128
-- Taux d'apprentissage : 0.0005, 0.0001, 0.00005, 0.00001
-- Weight decay : 0.00005, 0.0001, 0.0005, 0.001
+- **Taille des batchs** : 16, 32, 64, 128
+- **Taux d'apprentissage** : 0.0005, 0.0001, 0.00005, 0.00001
+- **Weight decay** : 0.00005, 0.0001, 0.0005, 0.001
 
 Pour ne pas trop consommer de ressources et gagner du temps, nous avons fait nos recherches sur 3 epochs.
 
