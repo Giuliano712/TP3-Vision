@@ -2,9 +2,9 @@
 
 ## Étudiants
 
--   **Goudal** Victor GOUV07120100
--   **Erard** Julien ERAJ09050200
--   **Flaceliere** Matthieu FLAM30090200
+- **Goudal** Victor GOUV07120100
+- **Erard** Julien ERAJ09050200
+- **Flaceliere** Matthieu FLAM30090200
 
 ## Introduction
 
@@ -14,17 +14,19 @@ Ce rapport présente notre travail sur le TP3 du cours 8INF804 - Vision artifici
 
 ### Prérequis
 
--   Python 3
--   Libs: pandas, os, pytorch, numpy, tqdm, sklearn.metrics, plotly.express, sys
--   Dataset trouvé sur Kaggle : [Cards Image Dataset-Classification](https://www.kaggle.com/datasets/gpiosenka/cards-image-datasetclassification)
+- Python 3
+- Libs: pandas, os, pytorch, numpy, tqdm, sklearn.metrics, plotly.express, sys
+- Dataset trouvé sur Kaggle : [Cards Image Dataset-Classification](https://www.kaggle.com/datasets/gpiosenka/cards-image-datasetclassification)
 
 ## Description de l'entrainement
 
-Pour ce TP, nous avons décidé de travailler sur GoogleColab nottamment pour diminuer le temps d'entrainement de nos réseaux de neurones. 
+Pour ce TP, nous avons décidé de travailler sur GoogleColab nottamment pour diminuer le temps d'entrainement de nos réseaux de neurones.
 Pour notre dataset, nous avons choisi les images d'un jeu de 53 cartes.
 Pour l'architecture déjà entrainée, nous avons choisi VGG19.
 
 ### Description du dataset
+
+Notre dataset est composé de 53 classes, chacune correspondant à une carte de jeu. Les images sont de taille 224 X 224 X 3 en format jpg. Il y a en 7624 images d'entrainement, 265 images de test et 265 images de validation. Le dataset est plutôt bien équilibré.
 
 ### Description des architectures
 
@@ -42,19 +44,37 @@ Pour l'architecture déjà entrainée, nous avons choisi VGG19.
 
 ### Recherche des hyperparamètres
 
+#### VGG19
+
+Pour VGG19 les hyperparamètres sont les suivants : `batch_size`, `learning_rate`, `weight_decay`, `epochs`.
+
+Avant de modifier les epochs nous avons voulu trouver les meilleurs valeurs pour les autres hyperparamètres. Pour trouver les meilleurs valeurs, nous avons fait varier les valeurs de ces hyperparamètres un par un et avons regardé les résultats obtenus (notamment l'accuracy car notre dataset est équilibré).
+
+Les valeurs que nous avons testées sont les suivantes :
+
+- `batch_size` : 32,64,128
+- `learning_rate` : 0.001, 0.0025, 0.005, 0.01
+- `weight_decay` : 0.0001, 0.0005, 0.1
+- `epochs` : 3, 5, 10, 20
+
 ### Entrainements sur beaucoup d'epochs
 
 ## Résultats
 
 ### Hyperparamètres optimaux
 
+#### VGG19
+
+- `batch_size` : 64
+- `learning_rate` : 0.005
+- `weight_decay` : 0.0001
+- `epochs` : 20
+
 ### Evaluation des performances
 
 ### Visualisation des entrainements
 
 ## Conclusion
-
-
 
 1. Téléchargement de notre dataset
 
@@ -65,8 +85,6 @@ La première étape de notre programme est de télécharger notre dataset direct
 On initialise notre propre CNN. Il est composé de 8 couches de convolutions
 
 3. Functions
-
-
 
 4. Configuration de nos modèles
 
@@ -87,8 +105,6 @@ Puis nous chargeons le dataset dans les modèles d'entrainement, de test et de v
 
 8. Lancement de l'entrainement
 
-Nous choisissons 
-    
+Nous choisissons
 
-   
 ## Résultats
