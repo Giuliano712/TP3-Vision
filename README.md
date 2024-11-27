@@ -281,5 +281,5 @@ Sur 3 entrainements, nous avons obtenu les résultats suivants :
 
 ## Conclusion
 
-Ce TP nous a permis de comprendre l'utilité du transfer learning d'une architecture déjà entrainée comparée à un modèle CNN qui s'entraine de zéro. La première méthode obtient des meilleurs accuracy avec une meilleure rapidité en sachant que le VGG19 s'entraine sur 217 141 paramètres alors que notre CNN est sur 13 551 365 paramètres.
+Ce TP nous a permis de comprendre l'utilité du transfer learning d'une architecture déjà entrainée comparée à un modèle CNN qui s'entraine de zéro. La première méthode obtient des meilleurs accuracy avec une meilleure rapidité en sachant que le model VGG19 s'entraine sur 217 141 paramètres alors que notre CNN est sur 13 551 365 paramètres.
 Nous avons également compris l'influence des hyperparamètres sur l'accuracy de nos modèles.
