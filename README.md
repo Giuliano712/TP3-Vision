@@ -72,6 +72,10 @@ Les valeurs que nous avons testées pour notre CNN sont les suivantes :
 
 Après avoir trouvé les meilleures valeures pour nos architectures, nous avons lancé des entrainements sur beaucoup d'épochs 10 et 20.
 
+#### VGG19
+
+#### Home-made CNN
+
 ## Résultats
 
 ### Hyperparamètres optimaux
