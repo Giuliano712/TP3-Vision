@@ -36,6 +36,8 @@ Notre dataset est composé de 53 classes, chacune correspondant à une carte de 
 
 Pour notre architecture CNN, nous avons créé un modèle assez basique avec 8 couches de convolution chacune avec une activation ReLu et une normalisation. Après une couche Flatten pour aplatir les données, nous avons ajouté deux couches denses et une fonction Softmax pour transformer les sorties en probabilités.
 
+Voici un visuel de notre architecture CNN : 
+
 <div style="width:80%; margin: auto;">
     <img src="/Image/CNNArchitecture.png" alt="accueil" style="width:100%;">
 </div>
