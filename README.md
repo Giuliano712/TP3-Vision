@@ -30,15 +30,50 @@ Notre dataset est composé de 53 classes, chacune correspondant à une carte de 
 
 ### Description des architectures
 
-#### VGG19
-
 #### Home-made CNN
 
-Pour notre architecture CNN, nous avons créé un modèle assez basique avec 8 couches de convolution chacune avec une activation ReLu et une normalisation. Après une couche Flatten pour aplatir les données, nous avons ajouté deux couches denses et une fonction Softmax pour transformer les sorties en probabilités.
+Pour notre architecture CNN, nous avons créé un modèle assez basique avec **8 couches de convolution** chacune avec une activation ReLu et une normalisation. Après **une couche Flatten** pour aplatir les données, nous avons ajouté **deux couches denses** et une **fonction Softmax** pour transformer les sorties en probabilités.
 
 Voici un visuel de notre architecture CNN :
 
 ![CNN Architecture](/Image/CNNArchitecture.png)
+
+Cette architecture est assez petit et simple. Elle possède **13 551 365** paramètres à entraîner. Comme nous l'avons créé nous-même, nous allons faire un entrainement **from scratch**. Et tout les paramètres sont entrainables.
+
+Nous utilisons la fonction python ci-dessous pour compter les poids du modèle :
+
+```python
+# Calculate the number of parameters
+  total_params = sum(p.numel() for p in model.parameters())
+  trainable_params = sum(p.numel() for p in model.parameters() if p.requires_grad)
+
+  print_txt(f"Total parameters: {total_params}", txt_file)
+  print_txt(f"Trainable parameters: {trainable_params}", txt_file)
+  ```
+
+#### VGG19
+
+VGG19 est une architecture de réseau de neurones convolutifs qui a été proposée par les chercheurs du Visual Graphics Group (VGG) de l'Université d'Oxford. Il s'agit d'une version améliorée de VGG16.
+
+Nous avons décidé de choisir VGG19 pour notre transfert learning car c'est une architecture qui a fait ses preuves et qui est assez simple à utiliser. Elle est composée de **19 couches** dont **16 couches de convolution** et **3 couches entièrement connectées**. Elle est très performante pour la classification d'images.
+
+Voici un visuel de notre architecture VGG : 
+
+![CNN Architecture](/Image/VGGArchitecture.png)
+
+Sachant que VGG19 est une architecture déjà entrainée sur ImageNet, nous allons faire du **transfer learning**. Nous allons **geler les premières couches** pour ne pas perdre les informations apprises sur ImageNet et **ajouter une couche dense** pour adapter le modèle à notre problème de classification de cartes. Voici le code qui illustre cette opération :
+
+```python
+model = models.vgg19(weights=models.VGG19_Weights.IMAGENET1K_V1)
+
+# Geler tous les poids de vgg
+for param in model.parameters():
+    param.requires_grad = False
+
+model.classifier[6] = nn.Linear(4096, class_number)
+```
+
+En plus du VGG, nous avons ajouté une couche dense de 4096 à 53 pour notre problème de classification de cartes. Cela nous donne un total de **139 787 381**. Grâce au transfert learning, nous n'avons que **217 141** à entraîner, ce qui est bien inférieur à notre CNN.
 
 ### Description de l'algorithme
 
