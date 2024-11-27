@@ -45,9 +45,22 @@ Voici un visuel de notre architecture CNN :
 
 ### Description de l'algorithme
 
+Dans cette partie, nous allons les différentes fonctions qui compose l'entrainement de notre modèle.
+
 #### Transformations des images
 
+Le pré-traitements des images est une étape importante très importante de l'entrainement. Dans notre cas, nous avons décidé de ne pas faire de la data augmentation et nous n'avons pas normaliser car nous n'obtenions pas de meilleurs résultats.
+
+Voici les transformations que nous avons appliquées sur les images :
+
+- **Resize** : 256x256 pour VGG19 et 224x224 pour notre CNN.
+- **ToTensor** : pour transformer les images en tenseurs.
+
 #### Optimizer et loss function
+
+Nous avons choisi d'utiliser l'optimiseur **AdamW** pour entraînement le modèle en raison de ses avantages significatifs par rapport à Adam et SGD. Contrairement à Adam, AdamW applique une **désintégration des poids** (weight decay) correcte en la séparant explicitement du terme de mise à jour des gradients, ce qui **améliore la généralisation du modèle**. Cette distinction est **essentielle pour éviter l'overfitting**, surtout sur des modèles complexes comme les CNN.
+
+En comparaison avec SGD, **AdamW (comme Adam) converge plus rapidement** grâce à son mécanisme adaptatif de mise à jour des pas d'apprentissage, ce qui est particulièrement utile lorsque le problème implique des données complexes ou des gradients bruités. De plus, **AdamW (comme Adam) conserve une meilleure stabilité en présence de plateaux dans la fonction de perte**, ce qui est courant lors de l'entraînement de CNN.
 
 ## Méthodologie de recherche et d'expérimentation
 
