@@ -213,7 +213,11 @@ Nous avons laissé constant les hyperparamètres suivants :
 
 ## Résultats
 
+Dans cette partie, nous avons pris les meilleurs hyperparamètres pour nos deux architectures que nous avons trouvé précédemment et nous allons faire un entrainement sur 20 epochs pour comparer les performances entre les 2 modèles.
+
 ### Hyperparamètres optimaux
+
+Ci-dessous se trouvent les hyperparamètres optimaux pour nos deux architectures :
 
 #### VGG19
 
