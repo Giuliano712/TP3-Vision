@@ -42,7 +42,7 @@ On configure nos modèles de test, de train et de validation comme vu sur les tu
 
 5. Paramétrage du test
 
-Ici on choisi le modèle a entrainer, le nombre d'epochs, la taille des batchs et le taux d'apprentissage.
+Ici on choisi le modèle a entrainer, le nombre d'epochs, la taille des batchs et le taux d'apprentissage. Pour ces entrainement, nous utilisons l'optimiseur Adam.
 
 6. Création des logs
 
