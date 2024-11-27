@@ -36,12 +36,9 @@ Notre dataset est composé de 53 classes, chacune correspondant à une carte de 
 
 Pour notre architecture CNN, nous avons créé un modèle assez basique avec 8 couches de convolution chacune avec une activation ReLu et une normalisation. Après une couche Flatten pour aplatir les données, nous avons ajouté deux couches denses et une fonction Softmax pour transformer les sorties en probabilités.
 
-Voici un visuel de notre architecture CNN : 
+Voici un visuel de notre architecture CNN :
 
-<div style="width:80%; margin: auto;">
-    <img src="/Image/CNNArchitecture.png" alt="accueil" style="width:100%;">
-</div>
-
+![CNN Architecture](/Image/CNNArchitecture.png)
 
 ### Description de l'algorithme
 
@@ -75,73 +72,104 @@ Avant de modifier les epochs nous avons voulu trouver les meilleurs valeurs pour
 #### CNN
 
 Pour l'entrainement de notre modèle CNN, nous avons fait varier les hyperparamètres suivants :
--  Taille des batchs : 16, 32, 64, 128
--  Taux d'apprentissage : 0.0005, 0.0001, 0.00005, 0.00001
--  Weight decay : 0.00005, 0.0001, 0.0005, 0.001
+
+- Taille des batchs : 16, 32, 64, 128
+- Taux d'apprentissage : 0.0005, 0.0001, 0.00005, 0.00001
+- Weight decay : 0.00005, 0.0001, 0.0005, 0.001
 
 Pour ne pas trop consommer de ressources et gagner du temps, nous avons fait nos recherches sur 3 epochs.
 
 ##### Batch size
 
 Nous avons laissé constant les hyperparamètres suivants :
--  Taux d'apprentissage : 5e-5
--  Weight decay : 1e-4
 
-| Batch Size | Balanced Accuracy | Kappa          |
-|------------|--------------------|----------------|
-| 16         | 0.2452 | 0.2304 |
-| 32         | 0.2905  | 0.2765 |
-| **64**         | **0.3358**  | **0.3231** |
-| 128        | 0.2753  | 0.2616  |
+- Taux d'apprentissage : 5e-5
+- Weight decay : 1e-4
 
+| Batch Size | Accuracy  | Kappa     |
+| ---------- | --------- | --------- |
+| 16         | 0.245     | 0.230     |
+| 32         | 0.290     | 0.276     |
+| **64**     | **0.335** | **0.323** |
+| 128        | 0.275     | 0.261     |
 
 ##### Learning rate
 
 Nous avons laissé constant les hyperparamètres suivants :
--  Taille de batch : 64
--  Weight decay : 1e-4
 
-| Learning Rate | Balanced Accuracy | Kappa     |
-|---------------|--------------------|-----------|
-| 0.00001       | 0.2755            | 0.2615    |
-| **0.00005**       | **0.3358**            | **0.3231**    |
-| 0.0001        | 0.2641            | 0.2500    |
-| 0.0005        | 0.0189            | 0.0000    |
+- Taille de batch : 64
+- Weight decay : 1e-4
+
+| Learning Rate | Accuracy   | Kappa      |
+| ------------- | ---------- | ---------- |
+| 0.00001       | 0.2755     | 0.2615     |
+| **0.00005**   | **0.3358** | **0.3231** |
+| 0.0001        | 0.2641     | 0.2500     |
+| 0.0005        | 0.0189     | 0.0000     |
 
 ##### Weight decay
 
 Nous avons laissé constant les hyperparamètres suivants :
--  Taille de batch : 64
--  Learning Rate : 5e-5
 
-| Weight Decay | Balanced Accuracy | Kappa     |
-|:------------:|:-----------------:|:---------:|
-| 0.00005      | 0.3132            | 0.3000    |
-| **0.0001**       | **0.3358**            | **0.3231**    |
-| 0.0005       | 0.2792            | 0.2654    |
-| 0.001        | 0.3208            | 0.3077    |
+- Taille de batch : 64
+- Learning Rate : 5e-5
 
-
-
-
+| Weight Decay |  Accuracy  |   Kappa    |
+| :----------: | :--------: | :--------: |
+|   0.00005    |   0.3132   |   0.3000   |
+|  **0.0001**  | **0.3358** | **0.3231** |
+|    0.0005    |   0.2792   |   0.2654   |
+|    0.001     |   0.3208   |   0.3077   |
 
 #### VGG19
 
-Les valeurs que nous avons testées pour VGG19 sont les suivantes :
+Pour l'entrainement de VGG nous avons fait varier les mêmes hyperparamètres que pour notre CNN.
 
-- `batch_size` : 32,64,128
-- `learning_rate` : 0.001, 0.0025, 0.005, 0.01
-- `weight_decay` : 0.0001, 0.0005, 0.1
-- `epochs` : 3, 5, 10, 20
+- Taille des batchs : 16, 32, 64, 128
+- Taux d'apprentissage : 0.0005, 0.0001, 0.00005, 0.00001
+- Weight decay : 0.0001, 0.0005, 0.001
 
-#### Home-made CNN
+##### Batch size
 
-Les valeurs que nous avons testées pour notre CNN sont les suivantes :
+Nous avons laissé constant les hyperparamètres suivants :
 
-- `batch_size` : 32,64,128
-- `learning_rate` : 0.00001, 0.00005, 0.0005, 0.0001, 0.005
-- `weight_decay` : 0.00001, 0.00005, 0.0001
-- `epochs` : 3, 5, 10, 20
+- Taux d'apprentissage : 0.005
+- Weight decay : 0.0001
+
+| Batch Size | Accuracy | Kappa |
+| ---------- | -------- | ----- |
+| 16         | 0.230    | 0.215 |
+| 32         | 0.256    | 0.242 |
+| 64         | 0.279    | 0.265 |
+| 128        | 0.267    | 0.253 |
+
+##### Learning rate
+
+Nous avons laissé constant les hyperparamètres suivants :
+
+- Taille de batch : 64
+- Weight decay : 0.0001
+
+| Learning Rate | Accuracy | Kappa |
+| ------------- | -------- | ----- |
+|               |          |       |
+|               |          |       |
+|               |          |       |
+|               |          |       |
+
+##### Weight decay
+
+Nous avons laissé constant les hyperparamètres suivants :
+
+- Taille de batch : 64
+- Learning Rate : 5e-5
+
+| Weight Decay | Accuracy | Kappa |
+| :----------: | :------: | :---: |
+|              |          |       |
+|              |          |       |
+|              |          |       |
+|              |          |       |
 
 ## Résultats
 
@@ -151,6 +179,13 @@ Les valeurs que nous avons testées pour notre CNN sont les suivantes :
 
 - `batch_size` : 64
 - `learning_rate` : 0.005
+- `weight_decay` : 0.0001
+- `epochs` : 20
+
+#### CNN
+
+- `batch_size` : 64
+- `learning_rate` : 0.00005
 - `weight_decay` : 0.0001
 - `epochs` : 20
 
