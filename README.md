@@ -68,14 +68,6 @@ Les valeurs que nous avons testées pour notre CNN sont les suivantes :
 - `weight_decay` : 0.00001, 0.00005, 0.0001
 - `epochs` : 3, 5, 10, 20
 
-### Entrainements sur beaucoup d'epochs
-
-Après avoir trouvé les meilleures valeures pour nos architectures, nous avons lancé des entrainements sur beaucoup d'épochs 10 et 20.
-
-#### VGG19
-
-#### Home-made CNN
-
 ## Résultats
 
 ### Hyperparamètres optimaux
