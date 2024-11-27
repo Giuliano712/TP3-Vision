@@ -50,6 +50,59 @@ Pour notre architecture CNN et VGG19, les hyperparamètres sont les suivants : `
 
 Avant de modifier les epochs nous avons voulu trouver les meilleurs valeurs pour les autres hyperparamètres. Pour trouver les meilleurs valeurs, nous avons fait varier les valeurs de ces hyperparamètres un par un et avons regardé les résultats obtenus (notamment l'accuracy car notre dataset est équilibré).
 
+#### CNN
+
+Pour l'entrainement de notre modèle CNN, nous avons fait varier les hyperparamètres suivants :
+-  Taille des batchs : 16, 32, 64, 128
+-  Taux d'apprentissage : 0.0005, 0.0001, 0.00005, 0.00001
+-  Weight decay : 0.0001, 0.0005, 0.001
+
+Pour ne pas trop consommer de ressources et gagner du temps, nous avons fait nos recherches sur 3 epochs.
+
+##### Batch size
+
+Nous avons laissé constant les hyperparamètres suivants :
+-  Taux d'apprentissage : 5e-5
+-  Weight decay : 1e-4
+
+| Batch Size | Balanced Accuracy | Kappa          |
+|------------|--------------------|----------------|
+| 16         | 0.245 | 0.230 |
+| 32         | 0.290  | 0.276 |
+| **64**         | **0.335**  | **0.323** |
+| 128        | 0.275  | 0.261  |
+
+
+##### Learning rate
+
+Nous avons laissé constant les hyperparamètres suivants :
+-  Taille de batch : 64
+-  Weight decay : 1e-4
+
+| Learning Rate | Balanced Accuracy | Kappa     |
+|---------------|--------------------|-----------|
+| 0.00001       | 0.2755            | 0.2615    |
+| **0.00005**       | **0.3358**            | **0.3231**    |
+| 0.0001        | 0.2641            | 0.2500    |
+| 0.0005        | 0.0189            | 0.0000    |
+
+##### Weight decay
+
+Nous avons laissé constant les hyperparamètres suivants :
+-  Taille de batch : 64
+-  Learning Rate : 5e-5
+
+| Weight Decay | Balanced Accuracy | Kappa     |
+|:------------:|:-----------------:|:---------:|
+| 0.00005      | 0.3132            | 0.3000    |
+| 0.0001       | 0.3358            | 0.3231    |
+| 0.0005       | 0.2792            | 0.2654    |
+| 0.001        | 0.3208            | 0.3077    |
+
+
+
+
+
 #### VGG19
 
 Les valeurs que nous avons testées pour VGG19 sont les suivantes :
