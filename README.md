@@ -36,43 +36,7 @@ Notre dataset est composé de 53 classes, chacune correspondant à une carte de 
 
 Pour notre architecture CNN, nous avons créé un modèle assez basique avec 8 couches de convolution chacune avec une activation ReLu et une normalisation. Après une couche Flatten pour aplatir les données, nous avons ajouté deux couches denses et une fonction Softmax pour transformer les sorties en probabilités.
 
-CNNClassifier(
-  (model): Sequential(
-    (0): Conv2d(3, 64, kernel_size=(3, 3), stride=(1, 1))
-    (1): ReLU()
-    (2): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
-    (3): Conv2d(64, 64, kernel_size=(3, 3), stride=(2, 2))
-    (4): ReLU()
-    (5): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
-    (6): Conv2d(64, 128, kernel_size=(3, 3), stride=(1, 1))
-    (7): ReLU()
-    (8): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
-    (9): Conv2d(128, 128, kernel_size=(3, 3), stride=(2, 2))
-    (10): ReLU()
-    (11): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
-    (12): Conv2d(128, 256, kernel_size=(3, 3), stride=(1, 1))
-    (13): ReLU()
-    (14): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
-    (15): Conv2d(256, 256, kernel_size=(3, 3), stride=(2, 2))
-    (16): ReLU()
-    (17): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
-    (18): Conv2d(256, 512, kernel_size=(3, 3), stride=(1, 1))
-    (19): ReLU()
-    (20): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
-    (21): Conv2d(512, 512, kernel_size=(3, 3), stride=(2, 2))
-    (22): ReLU()
-    (23): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
-    (24): Flatten(start_dim=1, end_dim=-1)
-    (25): Linear(in_features=73728, out_features=120, bias=True)
-    (26): ReLU()
-    (27): Linear(in_features=120, out_features=84, bias=True)
-    (28): ReLU()
-    (29): Linear(in_features=84, out_features=53, bias=True)
-    (30): Softmax(dim=1)
-  )
-)
-Total parameters: 13551365
-Trainable parameters: 13551365
+
 
 ### Description de l'algorithme
 
