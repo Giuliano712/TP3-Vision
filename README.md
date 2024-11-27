@@ -54,7 +54,7 @@ Nous utilisons la fonction python ci-dessous pour compter les poids du modèle :
 
   print_txt(f"Total parameters: {total_params}", txt_file)
   print_txt(f"Trainable parameters: {trainable_params}", txt_file)
-  ```
+```
 
 #### VGG19
 
@@ -62,7 +62,7 @@ VGG19 est une architecture de réseau de neurones convolutifs qui a été propos
 
 Nous avons décidé de choisir VGG19 pour notre transfert learning car c'est une architecture qui a fait ses preuves et qui est assez simple à utiliser. Elle est composée de **19 couches** dont **16 couches de convolution** et **3 couches entièrement connectées**. Elle est très performante pour la classification d'images.
 
-Voici un visuel de notre architecture VGG : 
+Voici un visuel de notre architecture VGG :
 
 ![CNN Architecture](/Image/VGGArchitecture.png)
 
@@ -176,12 +176,12 @@ Nous avons laissé constant les hyperparamètres suivants :
 - Taux d'apprentissage : 0.005
 - Weight decay : 0.0001
 
-| Batch Size | Accuracy | Kappa |
-| ---------- | -------- | ----- |
-| 16         | 0.230    | 0.215 |
-| 32         | 0.256    | 0.242 |
-| 64         | 0.279    | 0.265 |
-| 128        | 0.267    | 0.253 |
+| Batch Size | Accuracy  | Kappa     |
+| ---------- | --------- | --------- |
+| 16         | 0.230     | 0.215     |
+| 32         | 0.256     | 0.242     |
+| **64**     | **0.279** | **0.265** |
+| 128        | 0.267     | 0.253     |
 
 ##### Learning rate
 
@@ -190,12 +190,12 @@ Nous avons laissé constant les hyperparamètres suivants :
 - Taille de batch : 64
 - Weight decay : 0.0001
 
-| Learning Rate | Accuracy | Kappa |
-| ------------- | -------- | ----- |
-|               |          |       |
-|               |          |       |
-|               |          |       |
-|               |          |       |
+| Learning Rate | Accuracy  | Kappa     |
+| ------------- | --------- | --------- |
+| 0.001         | 0.271     | 0.257     |
+| 0.01          | 0.218     | 0.203     |
+| 0.0005        | 0.252     | 0.238     |
+| **0.005**     | **0.279** | **0.265** |
 
 ##### Weight decay
 
@@ -206,7 +206,7 @@ Nous avons laissé constant les hyperparamètres suivants :
 
 | Weight Decay | Accuracy | Kappa |
 | :----------: | :------: | :---: |
-|              |          |       |
+|    5e-05     |  0.241   | 0.226 |
 |              |          |       |
 |              |          |       |
 |              |          |       |
@@ -235,9 +235,20 @@ Ci-dessous se trouvent les hyperparamètres optimaux pour nos deux architectures
 
 ### Evaluation des performances
 
+#### VGG19
+
+Sur 3 entrainements, nous avons obtenu les résultats suivants :
+
+| Training | Accuracy           | Balanced Accuracy  | Kappa              | Top-2 Accuracy     | Top-3 Accuracy     |
+| -------- | ------------------ | ------------------ | ------------------ | ------------------ | ------------------ |
+| 1        | 0.5320754716981132 | 0.5320754716981132 | 0.523076923076923  | 0.6490566037735849 | 0.7132075471698113 |
+| 2        | 0.5320754716981132 | 0.5320754716981131 | 0.523076923076923  | 0.6377358490566037 | 0.7245283018867924 |
+| 3        | 0.5245283018867924 | 0.5245283018867924 | 0.5153846153846153 | 0.6641509433962264 | 0.7169811320754716 |
+| Moyenne  | 0.5292264150943396 | 0.5292264150943396 | 0.5205128205128205 | 0.650314465408805  | 0.7185726415094341 |
+
 ### Visualisation des entrainements
 
 ## Conclusion
 
-Ce TP nous a permis de comprendre l'utilité du transfer learning d'une architecture déjà entrainée comparée à un modèle CNN qui s'entraine de zéro. La première méthode obtient des meilleurs accuracy avec une meilleure rapidité en sachant que le VGG19 s'entraine sur  217 141 paramètres alors que notre CNN est sur 13 551 365 paramètres.
+Ce TP nous a permis de comprendre l'utilité du transfer learning d'une architecture déjà entrainée comparée à un modèle CNN qui s'entraine de zéro. La première méthode obtient des meilleurs accuracy avec une meilleure rapidité en sachant que le VGG19 s'entraine sur 217 141 paramètres alors que notre CNN est sur 13 551 365 paramètres.
 Nous avons également compris l'influence des hyperparamètres sur l'accuracy de nos modèles.
