@@ -235,35 +235,7 @@ Nous avons laissé constant les hyperparamètres suivants :
 
 ## Conclusion
 
-1. Téléchargement de notre dataset
-
-La première étape de notre programme est de télécharger notre dataset directement avec Kaggle.
-
-2. Initialisation de notre modèle CNN
-
-On initialise notre propre CNN. Il est composé de 8 couches de convolutions
-
-3. Functions
-
-4. Configuration de nos modèles
-
-On configure nos modèles de test, de train et de validation comme vu sur les tutoriels du cours.
-
-5. Paramétrage du test
-
-Ici on choisi le modèle a entrainer, le nombre d'epochs, la taille des batchs et le taux d'apprentissage. Pour ces entrainement, nous utilisons l'optimiseur Adam.
-
-6. Création des logs
-
-Nous crééons un fichier txt dans lequel nous mettons les paramètres du test et nous mettrons les données du test comme l'accuracy, le coeff de kappa et les courbes d'apprentissage.
-
-7. Charger le dataset
-
-Nous transformons le dataset en fonction du modèle utilisé (VGG19 ou notre CNN).
-Puis nous chargeons le dataset dans les modèles d'entrainement, de test et de validation.
-
-8. Lancement de l'entrainement
-
-Nous choisissons
+Ce TP nous a permis de comprendre l'utilité du transfer learning d'une architecture déjà entrainée comparée à un modèle CNN qui s'entraine de zéro. La première méthode obtient des meilleurs accuracy avec une meilleure rapidité en sachant que le VGG19 s'entraine sur  217 141 paramètres alors que notre CNN est sur 13 551 365 paramètres.
+Nous avons également compris l'influence des hyperparamètres sur l'accuracy de nos modèles.
 
 ## Résultats
