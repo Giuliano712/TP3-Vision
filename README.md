@@ -42,22 +42,35 @@ Notre dataset est composé de 53 classes, chacune correspondant à une carte de 
 
 ## Méthodologie de recherche et d'expérimentation
 
+Après avoir créé notre architecture CNN et choisi VGG19 pour le transfert learning. Il nous faut une stratégie pour optimiser nos architectures pour mieux les comparer sur notre dataset d'entrainement.
+
 ### Recherche des hyperparamètres
 
-#### VGG19
-
-Pour VGG19 les hyperparamètres sont les suivants : `batch_size`, `learning_rate`, `weight_decay`, `epochs`.
+Pour notre architecture CNN et VGG19, les hyperparamètres sont les suivants : `batch_size`, `learning_rate`, `weight_decay`, `epochs`.
 
 Avant de modifier les epochs nous avons voulu trouver les meilleurs valeurs pour les autres hyperparamètres. Pour trouver les meilleurs valeurs, nous avons fait varier les valeurs de ces hyperparamètres un par un et avons regardé les résultats obtenus (notamment l'accuracy car notre dataset est équilibré).
 
-Les valeurs que nous avons testées sont les suivantes :
+#### VGG19
+
+Les valeurs que nous avons testées pour VGG19 sont les suivantes :
 
 - `batch_size` : 32,64,128
 - `learning_rate` : 0.001, 0.0025, 0.005, 0.01
 - `weight_decay` : 0.0001, 0.0005, 0.1
 - `epochs` : 3, 5, 10, 20
 
+#### Home-made CNN
+
+Les valeurs que nous avons testées pour notre CNN sont les suivantes :
+
+- `batch_size` : 32,64,128
+- `learning_rate` : 0.00001, 0.00005, 0.0005, 0.0001, 0.005
+- `weight_decay` : 0.00001, 0.00005, 0.0001
+- `epochs` : 3, 5, 10, 20
+
 ### Entrainements sur beaucoup d'epochs
+
+Après avoir trouvé les meilleures valeures pour nos architectures, nous avons lancé des entrainements sur beaucoup d'épochs 10 et 20.
 
 ## Résultats
 
