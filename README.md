@@ -16,10 +16,13 @@ Ce rapport présente notre travail sur le TP3 du cours 8INF804 - Vision artifici
 
 -   Python 3
 -   Libs: pandas, os, pytorch, numpy, tqdm, sklearn.metrics, plotly.express, sys
--   Dataset trouvés sur Kaggle : Cards Image Dataset-Classification
+-   Dataset trouvé sur Kaggle : Cards Image Dataset-Classification
 
 ## Description de l'algorithme
 
+Pour ce TP, nous avons décidé de travailler sur GoogleColab nottamment pour diminuer le temps d'entrainement de nos réseaux de neurones. 
+Pour notre dataset, nous avons choisi les images d'un jeu de 53 cartes.
 
+1. Téléchargement de notre dataset
 
 ## Résultats
