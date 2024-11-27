@@ -25,24 +25,38 @@ Pour notre dataset, nous avons choisi les images d'un jeu de 53 cartes.
 Pour l'architecture déjà entrainée, nous avons choisi VGG19. 
 
 1. Téléchargement de notre dataset
-   La première étape de notre programme est de télécharger notre dataset directement avec Kaggle.
+
+La première étape de notre programme est de télécharger notre dataset directement avec Kaggle.
 
 2. Initialisation de notre modèle CNN
-   On initialise notre propre CNN. Il est composé de 8 couches de convolutions
 
-3. Création d'un fichier txt
-   Nous créons un fichier txt dans lequel nous mettrons les informations utiles de nos différents entrainements.
+On initialise notre propre CNN. Il est composé de 8 couches de convolutions
 
-5. Configuration de nos modèles
-   On configure nos modèles de test, de train et de validation comme vu sur les tutoriels du cours.
+3. Functions
 
-6. Paramétrage du test
-   Ici on choisi le modèle a entrainer, le nombre d'epochs, la taille des batchs et le taux d'apprentissage.
 
-7. 
+
+4. Configuration de nos modèles
+
+On configure nos modèles de test, de train et de validation comme vu sur les tutoriels du cours.
+
+5. Paramétrage du test
+
+Ici on choisi le modèle a entrainer, le nombre d'epochs, la taille des batchs et le taux d'apprentissage.
+
+6. Création des logs
+
+Nous crééons un fichier dans lequel nous mettons les paramètres du test et nous mettrons les données du test comme l'accuracy, le coeff de kappa et les courbes d'apprentissage.
+
+7. Charger le dataset
+
+Nous transformons le dataset en fonction du modèle utilisé (VGG19 ou notre CNN).
+Puis nous chargeons le dataset dans les modèles d'entrainement, de test et de validation.
+
+8. Lancement de l'entrainement
+
+Nous choisissons 
     
-
-
 
    
 ## Résultats
