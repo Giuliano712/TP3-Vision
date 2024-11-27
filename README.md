@@ -59,7 +59,7 @@ Avant de modifier les epochs nous avons voulu trouver les meilleurs valeurs pour
 Pour l'entrainement de notre modèle CNN, nous avons fait varier les hyperparamètres suivants :
 -  Taille des batchs : 16, 32, 64, 128
 -  Taux d'apprentissage : 0.0005, 0.0001, 0.00005, 0.00001
--  Weight decay : 0.0001, 0.0005, 0.001
+-  Weight decay : 0.00005, 0.0001, 0.0005, 0.001
 
 Pour ne pas trop consommer de ressources et gagner du temps, nous avons fait nos recherches sur 3 epochs.
 
@@ -71,10 +71,10 @@ Nous avons laissé constant les hyperparamètres suivants :
 
 | Batch Size | Balanced Accuracy | Kappa          |
 |------------|--------------------|----------------|
-| 16         | 0.245 | 0.230 |
-| 32         | 0.290  | 0.276 |
-| **64**         | **0.335**  | **0.323** |
-| 128        | 0.275  | 0.261  |
+| 16         | 0.2452 | 0.2304 |
+| 32         | 0.2905  | 0.2765 |
+| **64**         | **0.3358**  | **0.3231** |
+| 128        | 0.2753  | 0.2616  |
 
 
 ##### Learning rate
@@ -99,7 +99,7 @@ Nous avons laissé constant les hyperparamètres suivants :
 | Weight Decay | Balanced Accuracy | Kappa     |
 |:------------:|:-----------------:|:---------:|
 | 0.00005      | 0.3132            | 0.3000    |
-| 0.0001       | 0.3358            | 0.3231    |
+| **0.0001**       | **0.3358**            | **0.3231**    |
 | 0.0005       | 0.2792            | 0.2654    |
 | 0.001        | 0.3208            | 0.3077    |
 
