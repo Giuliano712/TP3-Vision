@@ -21,7 +21,7 @@ Ce rapport présente notre travail sur le TP3 du cours 8INF804 - Vision artifici
 ## Description de l'algorithme
 
 Pour ce TP, nous avons décidé de travailler sur GoogleColab nottamment pour diminuer le temps d'entrainement de nos réseaux de neurones. 
-Pour notre dataset, nous avons choisi les images d'un jeu de 53 cartes.
+Pour notre dataset, nous avons choisi les images d'un jeu de 52 cartes et le joker donc 53 cartes en tout.
 Pour l'architecture déjà entrainée, nous avons choisi VGG19. 
 
 1. Téléchargement de notre dataset
