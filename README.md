@@ -261,20 +261,36 @@ Sur 3 entrainements, nous avons obtenu les résultats suivants :
 
 #### Loss
 
+Les courbes de loss montrent que les deux entraînements ont convergé efficacement, avec une diminution régulière des valeurs de perte au fil des itérations.
+
+Cependant, on observe que le modèle VGG19 atteint une loss finale beaucoup plus basse (0,2) par rapport au CNN basique (3,56). Cette différence s'explique par le fait que VGG19 a été initialisé avec des poids pré-entraînés sur le dataset ImageNet, lui conférant une meilleure capacité de généralisation dès le départ. En revanche, le CNN a été entraîné à partir de zéro, sans bénéficier d'une pré-entraînement.
+
+Cette observation suggère que, bien que le VGG19 soit plus performant dans ce contexte, il pourrait être intéressant de prolonger l'entraînement du CNN pour évaluer s'il continue à réduire la loss et à se rapprocher des performances de VGG19.
+
 ![Loss CNN](/Image/LossCNN.png)
 ![Loss VGG](/Image/LossVGG.png)
 
 #### Accuracy
+
+Les courbes d'accuracy mettent en évidence que le VGG19 surpasse largement le CNN en termes de performance. Le VGG19 atteint une accuracy finale de 0,93, tandis que le CNN se limite à 0,44.
+
+On observe également que la courbe d'accuracy du VGG19 se stabilise, ce qui indique que son entraînement est arrivé à maturation. En revanche, la courbe du CNN n'est pas encore stabilisée, ce qui suggère qu'un entraînement supplémentaire pourrait potentiellement améliorer ses performances.
+
+Il est toutefois important de noter un phénomène de surapprentissage (overfitting) dans le transfert d'apprentissage du VGG19. L'accuracy sur l'ensemble d'entraînement est de 0,93, alors qu'elle chute à 0,53 sur l'ensemble de test. À l'opposé, les courbes d'entraînement et de validation du CNN sont plus proches, ce qui indique une meilleure cohérence et moins de surapprentissage, bien que ses performances globales soient inférieures à celles du VGG19.
 
 ![Accuracy CNN](/Image/AccuracyCNN.png)
 ![Accuracy VGG](/Image/AccuracyVGG.png)
 
 #### Kappa
 
+Les courbes de Kappa montrent des tendances similaires à celles des courbes d'accuracy. Le VGG19 obtient un Kappa final de 0,92, tandis que le CNN se limite à 0,40.
+
 ![Kappa CNN](/Image/KappaCNN.png)
 ![Kappa VGG](/Image/KappaVGG.png)
 
 #### Top-3 accuracy
+
+Les courbes de Top-3 accuracy montrent que le VGG19 surpasse également le CNN en termes de performance. Le VGG19 atteint une Top-3 accuracy finale de 1, tandis que le CNN se limite à 0,46.
 
 ![Top-3-accuracy CNN](/Image/Top-3-accuracyCNN.png)
 ![Top-3-accuracy VGG](/Image/Top-3-accuracyVGG.png)
